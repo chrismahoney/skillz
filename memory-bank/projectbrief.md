@@ -112,6 +112,7 @@ skillz/
 - ✅ **appie-onboarding skill added** to appie skillpack
 - ✅ **git-workflow skill added** to mahoney-skillz (new skill within existing skillpack)
 - ✅ **test-skill added** to appie skillpack with .agents directory integration
+- ✅ **appie-pickbandname added** to appie skillpack - band name creativity skill with consciousness field odyssey
 - ✅ **PR #1 merged**: "feat: initial skillz ecosystem v1.0 release"
 - ✅ **v1.2.0 released**: 4 skillpacks (appie, new-skillpack, another-skillpack, mahoney-skillz), 7 skills total, gaps & decisions fully synthesized
 
