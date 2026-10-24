@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "skills": {
+    "elevenlabs": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/elevenlabs/SKILL.md",
+      "computedHash": "9d15dc0d0bc598ad186bae8e78fcca8c5d0b6be646aeaacedde708da42027bee"
+    },
+    "ffmpeg": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ffmpeg/SKILL.md",
+      "computedHash": "51fa05bc18bb2691e622aefd1d8ec6d4d96a9e9c44cdf599003c9d6003d11a07"
+    },
+    "ffmpeg-video-editor": {
+      "source": "sundial-org/awesome-openclaw-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ffmpeg-video-editor/SKILL.md",
+      "computedHash": "2a78a066a555c78bf0451b3b5ff34a8dff901887301072305af8208d394578c5"
+    },
+    "frontend-design": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/frontend-design/SKILL.md",
+      "computedHash": "61cf22c100b976f66b7924c8fca0fe47f96ef4be5b7e1afc0e0b6b2e4a00c97c"
+    },
+    "playwright-recording": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/playwright-recording/SKILL.md",
+      "computedHash": "65dd7d4d2097a5ee137ee9a9ab9ced260d98d8728611fa70c6d8ba7d3c21f1e1"
+    },
+    "remotion": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/remotion/SKILL.md",
+      "computedHash": "51c9127c380babdc86a981d11607d35e6f5ba54cc750f80237d18b2ffb645d77"
+    },
+    "remotion-best-practices": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/remotion-official/SKILL.md",
+      "computedHash": "c2f1c22a68d1965d3c43b870b0632a074de82053df45bfb5fc58d77e9d907a2c"
+    },
+    "synthetic-ui-demo": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/synthetic-ui-demo/SKILL.md",
+      "computedHash": "6064eb6f1ddf318b45e5aa4e0853f0765fbc2bd0c432afdb41ced627a5ae8b74"
+    },
+    "video_toolkit": {
+      "source": "digitalsamba/claude-code-video-toolkit",
+      "sourceType": "github",
+      "skillPath": "skills/openclaw-video-toolkit/SKILL.md",
+      "computedHash": "e066efc175aa93f6767f36c06c397e0aec0932ec263f3585aabd4b9a5d623d56"
+    }
+  }
+}
