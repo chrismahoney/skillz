@@ -97,7 +97,7 @@
 **Last Updated:** v1.2.0, mahoney-skillz added, gaps & decisions interrogated, PR #2 merged  
 **Status:** ✅ All P1-P5 complete, all 7 design milestones (M1-M7) completed  
 **Next Focus:** v1.2.0 release with mahoney-skillz as 4th skillpack, dogfooding appie-onboarding process  
-**Skills for Further Creation:** ['appie-onboarding-v2', 'new-skillpack-v2', 'another-skillpack-v2']  
+**Skills for Further Creation:** ['git-workflow', 'appie-onboarding-v2', 'new-skillpack-v2', 'another-skillpack-v2']  
 
 **Key Achievements:**
 - appie.SKILL.md with full frontmatter + Skillpack Management feature

@@ -75,4 +75,5 @@
 - ✅ **Skillpack Management feature** added to enable free skill movement between packs
 - **Structure reorganized** per user specification for consistency
 - ✅ **appie-onboarding skill added** targeting 0.2.0 release
+- ✅ **git-workflow skill added** to mahoney-skillz (new skill within existing skillpack)
 - 🅰️ **Gaps & decisions interrogated**: 8 critical requirements synthesized for v1.2.0 foundation

@@ -110,6 +110,7 @@ skillz/
 - ✅ 5/5 unit tests passed
 - ✅ **Memory bank fully updated** (6 core files)
 - ✅ **appie-onboarding skill added** to appie skillpack
+- ✅ **git-workflow skill added** to mahoney-skillz (new skill within existing skillpack)
 - ✅ **PR #1 merged**: "feat: initial skillz ecosystem v1.0 release"
 - ✅ **v1.2.0 released**: 4 skillpacks (appie, new-skillpack, another-skillpack, mahoney-skillz), 6 skills total, gaps & decisions fully synthesized
 
