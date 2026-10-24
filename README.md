@@ -1,23 +1,48 @@
 # skillz
 
-A comprehensive repository of individual skills following best practices from the skill- framework, paired with a modern React-based visual catalog for discovering, browsing, and managing skills. **Now includes skillpack support** with `chrismahoney/skillz@appie` as the first skillpack.
+A comprehensive repository of individual skills following best practices from the skill-creator framework, paired with a modern React-based visual catalog for discovering, browsing, and managing skills. **Now includes skillpack support** with 4 skillpacks: appie, new-skillpack, another-skillpack, and mahoney-skillz, plus the appie-onboarding skill. **v1.2.0 includes 4 skillpacks: appie, new-skillpack, another-skillpack, and mahoney-skillz, plus the appie-onboarding skill.**
 
 ## 📦 Skillpack Structure
 
 The `skillz` project now supports **skillpacks** - organized collections of skills with consistent metadata and session reporting.
 
-### Current Skillpack: `chrismahoney/skillz@appie`
+### Current Skillpacks
 
-```
-out/skillpacks/chrismahoney/skillz/
-├ appie.SKILL.md
-├ session-report.md
-├ templates/
-│   └ SKILL_TEMPLATE.md
-└ session-reports/
-    ├ appie.md
-    └ session-report.md
-```
+
+| Skillpack | Skills | Status |
+|-----------|--------|--------|
+| `chrismahoney/skillz@appie` | appie, session-report, appie-onboarding | ✅ v1.2.0 Complete |
+| `chrismahoney/skillz@new-skillpack` | new-skillpack | ✅ Created |
+| `chrismahoney/skillz@another-skillpack` | another-skillpack | ✅ Created |
+| `chrismahoney/skillz@mahoney-skillz` | mahoney-skillz skills | 🚧 In Development |
+
+### Skillpack Directory Structure
+
+```out/skillpacks/chrismahoney/skillz/
+├ appie/
+│   ├ appie.SKILL.md              # Foundational skill metadata
+│   ├ session-report.md           # Session report for appie skill
+│   ├ templates/
+│   │   └ SKILL_TEMPLATE.md       # Template for creating new skills
+│   └ session-reports/
+│       ├ appie.md                # Initial session report
+│       ├ session-report.md       # session-report skill session report
+│       └ appie-onboarding.md     # appie-onboarding session report
+├ new-skillpack/
+│   ├ new-skillpack.SKILL.md      # New skillpack foundational skill
+│   └ session-reports/
+│       └ new-skillpack.md        # new-skillpack session report
+├ another-skillpack/
+│   ├ another-skillpack.SKILL.md  # Another-skillpack foundational skill
+│   └ session-reports/
+│       └ another-skillpack.md    # another-skillpack session report
+├ mahoney-skillz/
+│   ├ mahoney-skillz.SKILL.md     # Mahoney-skillz foundational skillpack metadata
+│   ├ session-report.md           # Session report for mahoney-skillz skillpack
+│   └ session-reports/
+│       └ mahoney-skillz.md       # Initial session report
+└ templates/
+    └ SKILL_TEMPLATE.md           # Template for creating new skills
 
 ### How to Create a New Skillpack
 
@@ -51,23 +76,9 @@ Verify adherence to `https://agentskills.io/specification` - all required frontm
 
 The `skillz` project now supports **skillpacks** - organized collections of skills with consistent metadata and session reporting.
 
-### Current Skillpack: `chrismahoney/skillz@appie`
-
-```
-out/skillpacks/chrismahoney/skillz/
-├ appie.SKILL.md
-├ session-report.md
-├ templates/
-│   └ SKILL_TEMPLATE.md
-└ session-reports/
-    ├ appie.md
-    └ session-report.md
-
-A comprehensive repository of individual skills following best practices from the skill-creator framework, paired with a modern React-based visual catalog for discovering, browsing, and managing skills. **Now includes skillpack support** with `chrismahoney/skillz@appie` as the first skillpack.
-## Footnotes
-
 - **Current version**: 1.1.0 (skillpack edition)
-- **First skillpack**: `chrismahoney/skillz@appie` with appie and session-report skills
+- **First skillpack**: `chrismahoney/skillz@appie` - founding skillpack (v1.0.0)
+- **Additional skillpacks**: `chrismahoney/skillz@new-skillpack`, `chrismahoney/skillz@another-skillpack`
 - **Known issue**: `npx skills list --json` returns empty array for skillpack skills until path resolution configured (CLI is GitHub-based; skillpack format is complementary)
 - **Memory bank**: All 6 core files updated with persistent context
 - **Design**: All 7 milestones (M1-M7) completed per `WORKING_SKILL_SEED.md`

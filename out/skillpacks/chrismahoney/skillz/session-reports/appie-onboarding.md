@@ -5,7 +5,7 @@ title: "appie-onboarding - Initial Session Report"
 
 ### Skill Identifier
 - **Skill ID**: appie-onboarding
-- **Skill Locator**: chrismahoney/skillz@appie
+- **Skill Locator**: chrismahoney/skillz@appie-onboarding
 - **Entity/Organization**: truemotive (developer entity)
 - **Author/Owner**: chrismahoney
 - **Skillpack**: chrismahoney/skillz@appie
@@ -37,7 +37,7 @@ The `appie-onboarding` skill was designed as the onboarding guide for the `chris
   - `description`: Skill description
   - `owner`: Skill owner/author
   - `repo`: GitHub repository name
-  - `skill_locator`: Full skill locator (e.g., `chrismahoney/skillz@appie`)
+  - `skill_locator`: Full skill locator (e.g., `chrismahoney/skillz@appie-onboarding`)
   - `tags`: Optional tags array (e.g., `[skillpack, onboarding]`)
 
 ##### Environment Variables

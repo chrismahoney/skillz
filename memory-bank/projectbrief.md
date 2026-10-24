@@ -1,14 +1,14 @@
 # Project Brief: skillz
 
 **Created:** October 23, 2026  
-**Version:** 1.1.0  (skillpack edition)  
+**Version:** 1.2.0 (skillpack edition)  
 **Type:** Skills Repository & Visual Catalog
 
 ---
 
 ## 🎯 Mission Statement
 
-A comprehensive repository of individual skills following best practices from the skill-creator framework, paired with a modern React-based visual catalog for discovering, browsing, and managing skills. **Now includes skillpack support** with `chrismahoney/skillz@appie` as the first skillpack, and `new-skillpack` and `another-skillpack` as complementary skillpacks.
+A comprehensive repository of individual skills following best practices from the skill-creator framework, paired with a modern React-based visual catalog for discovering, browsing, and managing skills. **Now includes skillpack support** with `chrismahoney/skillz@appie` as the first skillpack, and `new-skillpack`, `another-skillpack`, and `mahoney-skillz` as complementary skillpacks.
 
 ---
 
@@ -104,15 +104,14 @@ skillz/
 - ✅ **Memory bank updated** (activeContext.md, progress.md, projectbrief.md)
 - ✅ **new-skillpack created** (new-skillpack.SKILL.md and session report)
 - ✅ **another-skillpack created** (another-skillpack.SKILL.md and session report)
+- ✅ **mahoney-skillz created** (mahoney-skillz.SKILL.md and session report)
 - ✅ **Skillpack Management feature added** - specifying new/existing skillpacks and moving skills between packs
-- ✅ All 7 design milestones (M1-M7) completed
+- ✅ **All 7 design milestones (M1-M7) completed**
 - ✅ 5/5 unit tests passed
-- ✅ Memory bank fully updated (6 core files)
-
-### In Progress
-- ⏳ `npx skills` CLI integration testing (P4 pending - CLI is GitHub-based; skillpack format complementary)
-- ⏳ Skills specification doc validation (P5 pending - all frontmatter fields verified)
-- ⏳ Additional skills beyond prototypes (user creating frontend skillpack for web application)
+- ✅ **Memory bank fully updated** (6 core files)
+- ✅ **appie-onboarding skill added** to appie skillpack
+- ✅ **PR #1 merged**: "feat: initial skillz ecosystem v1.0 release"
+- ✅ **v1.2.0 released**: 4 skillpacks (appie, new-skillpack, another-skillpack, mahoney-skillz), 6 skills total, gaps & decisions fully synthesized
 
 ---
 
