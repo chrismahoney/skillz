@@ -4,7 +4,7 @@ name: appie-onboarding
 description: A skill for onboarding new developers to the chrismahoney/skillz@appie skillpack, providing guidance on skillpack structure, skill creation, and project setup
 author: chrismahoney
 tags: [skillpack, onboarding,truemotive]
-skill_locator: chrismahoney/skillz@appie
+skill_locator: chrismahoney/skillz@appie-onboarding
 ---
 
 ## Skill Purpose
@@ -39,7 +39,7 @@ Use the `SKILL_TEMPLATE.md` at `out/skillpacks/chrismahoney/skillz/templates/SKI
 - `{{description}}` - Brief description of the skill
 - `{{author}}` - `chrismahoney`
 - `{{tags}}` - Optional tags array (e.g., `[skillpack, onboarding]`)
-- `{{skill_locator}}` - `chrismahoney/skillz@appie`
+- `{{skill_locator}}` - `chrismahoney/skillz@appie-onboarding`
 
 ### Step 3: Generate Session Report
 Create a session report in `session-reports/` following the format in `session-reports/appie.md`. Each report documents:
@@ -63,7 +63,7 @@ Verify adherence to `https://agentskills.io/specification`:
 ### Specifying This Skillpack
 When using this skill, the `skill_locator` frontmatter should be:
 ```
-skill_locator: chrismahoney/skillz@appie
+skill_locator: chrismahoney/skillz@appie-onboarding
 ```
 
 ### Moving Skills Between Skillpacks
