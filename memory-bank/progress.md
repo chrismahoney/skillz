@@ -77,5 +77,5 @@
 - ✅ **appie-onboarding skill added** targeting 0.2.0 release
 - ✅ **git-workflow skill added** to mahoney-skillz (new skill within existing skillpack)
 - ✅ **test-skill added** to appie skillpack with .agents directory integration
-- ✅ **appie-pickbandname added** to appie skillpack - band name creativity skill with consciousness field odyssey
+- ✅ **appie-pickbandname added** - generic onboarding pattern for skill discovery and naming
 - 🅰️ **Gaps & decisions interrogated**: 8 critical requirements synthesized for v1.2.0 foundation
