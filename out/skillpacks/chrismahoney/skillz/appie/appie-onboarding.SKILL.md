@@ -84,6 +84,50 @@ This skill requires the following environment variables (configured via `.env.ex
 - `OPENAI_API_KEY` - OpenAI API key (optional, for AI features)
 - `ANTHROPIC_API_KEY` - Anthropic API key (optional, for AI features)
 
+## .agents Directory Integration
+
+When a user specifies or selects a skill from a skills `'find'` operation that should be used while working in this skillpack, the skill should be added to the root project directory (git repo root) in `.agents/` as done by the `npx skills add` command.
+
+### Behavior
+
+1. **Skills 'find' operation**: When running `npx skills find` and selecting a skill to use in the current context
+2. **Automatic `.agents` placement**: The selected skill's `.md` file is automatically placed at the git repo root in `.agents/<skill-id>.md`
+3. **Skill activation**: The skill becomes active for the current working session within the skillpack
+4. **Persistence**: The `.agents/` entry persists across sessions, similar to `npx skills add` behavior
+
+### Example
+
+If a user runs `npx skills find` and selects `test-skill` to use while working in the `appie` skillpack:
+
+```bash
+# The skill gets added to:
+.git-root/.agents/test-skill.md
+
+# With the following frontmatter preserved:
+---
+id: test-skill
+name: test-skill
+description: A test skill created to verify the onboarding workflow
+author: chrismahoney
+tags: [skillpack, appie, test]
+skill_locator: chrismahoney/skillz@test-skill
+---
+```
+
+### Integration with Skillpack Workflow
+
+- Skills discovered via `npx skills find` can be moved between skillpacks by updating the `skill_locator` frontmatter
+- The `.agents/` directory entry serves as the active skill reference for the current working session
+- When moving skills between skillpacks, update both the `skill_locator` AND the `.agents/` directory file
+- Session reports should document which `.agents/` version of the skill is currently active
+
+### Verification
+
+- ✅ Run `npx skills find` to verify skill discovery
+- ✅ Confirm `.agents/<skill-id>.md` is created at git repo root
+- ✅ Verify the skill_locator in `.agents/` matches the skillpack format
+- ✅ Test skill activation within the skillpack context
+
 ## Session Reports
 
 Full session reports are generated and included in the export metaprompt. Each report documents:
