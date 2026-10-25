@@ -38,6 +38,17 @@
 - ✅ SkillCard refined with focus-visible rings, hover/focus/active states
 - ✅ MindMap dataviz with six-check methodology (6/6 checks applied)
 - ✅ Build verification: npx vite build exits 0
+- ✅ Jenkins CI/CD pipeline added (declarative, turbo-1 agent, build/test/package/release stages)
+- ✅ WCAG AA color palette validation via HSL computation
+- ✅ Design token archival in pipeline artifacts
+
+## Release Process Formalized ✅ **COMPLETE** (Phase 1 First Release)
+- **Pipeline style**: Declarative (chosen for standard CI/CD, simpler for Node/React)
+- **Artifact storage**: Cloud R2/Cloudflare profile (cost-effective, modern object storage)
+- **Nightly builds**: Disabled (triggered on push only, no scheduled nightly runs on turbo-1)
+- **Git flow**: feature/initial-release → PR → release/v1.0 → tag v1.0.0 (GitFlow-lite)
+- **Documentation**: Astro-based SPA (static-first, markdown-centric chosen over docusaurus/GitHub Pages)
+- **Appie user approval**: Flexible "Highway to the Danger Zone" approach - project-adjustable, discourages direct main pushes with humor, user decides level of involvement
 
 ## Phase 2: Data Population ⏳ **NEXT**
 - Dynamic skill card render from `skills.sh` API (or current mocked data)

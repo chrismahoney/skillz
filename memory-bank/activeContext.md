@@ -38,5 +38,12 @@
 - **Phase 1 Step 1**: ui-ux-pro-max Color Palette Selection & Application ✅ **COMPLETE**
 - **Phase 1 Step 2**: SkillCard component refinement with frontend-design patterns ✅ **COMPLETE**
 - **Phase 1 Step 3**: MindMap dataviz six-check methodology for color encoding ✅ **COMPLETE**
-- **Phase 1 Step 4**: Design tokens documentation generation
+- **Phase 1 Step 4**: Design tokens documentation generation ✅ **COMPLETE**
+- **CI/CD**: Jenkins pipeline added for automated release (declarative, turbo-1 agent, build/test/package/release stages) ✅ **ADDED**
+  - Pipeline style: Declarative (opinionated, simpler for Node/React projects)
+  - Artifact storage: Cloud R2/Cloudflare profile
+  - Nightly builds: Disabled (on push only, no scheduled runs)
+  - Git flow: feature branch → PR → release branch → tag (GitFlow-lite)
+  - Documentation: Astro-based SPA (static-first, markdown-centric)
+  - Appie user approval: Flexible "Highway to the Danger Zone" - project-adjustable, discourages direct main pushes
 - **Phase 2**: Proceed to data population from `skills.sh` API
