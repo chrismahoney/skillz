@@ -48,3 +48,44 @@
 - `run_commands` — check file structure, run grep/sed/python
 - `editor` — modify HTML, memory bank files
 - `ask_question` — user interviews (locked format going forward)
+
+## AGENTS Rules: Document Formatting
+
+**STRICT REQUIREMENT**: Document formatting must always be applied to code and JSON blobs.
+
+### Rules
+
+1. **Code blocks**: All code fences must use triple backticks (```) with appropriate language identifiers for syntax highlighting
+
+2. **JSON formatting**: All JSON blobs must be:
+   - Properly indented with 2-space indentation
+   - Have keys sorted alphabetically where feasible
+   - Be valid JSON (no trailing commas, proper quoting)
+   - Include type annotations when the JSON represents typed data
+
+3. **YAML frontmatter**: All YAML frontmatter in Markdown files must:
+   - Use `---` delimiters on separate lines
+   - Have keys quoted consistently
+   - Be valid YAML
+
+4. **Markdown code spans**: Inline code must use single backticks (`) with no spaces between backticks and code
+
+5. **Tabular data**: Tables must use the pipe-table format with:
+   - Header row separated by `---`
+   - Column alignment specified (:-:, :-, or :--)
+
+6. **Consistency**: Formatting style must be consistent throughout a document - do not mix indentation styles (2-space vs 4-space) within the same document
+
+### Rationale
+
+- Ensures AI-generated and modified code is immediately usable
+- Reduces debugging time from formatting-related issues
+- Maintains professional code quality standards
+- Facilitates automated processing and tooling
+
+### Enforcement
+
+- All file modifications must pass formatting checks
+- New files must adhere to these conventions from creation
+- Existing files being modified must be brought into compliance
+- Deviations must be documented with justification
