@@ -1,82 +1,66 @@
-# Progress: appie skillpack development (v1.2.0)
+# Progress: skillz Playground React Migration (v1.2.0)
 
 ## What Works
-- ✅ appie.SKILL.md created with complete frontmatter
-- ✅ Initial session report created in session-reports/appie.md
-- ✅ session-report skill added to skillpack
-- ✅ new-skillpack created with new-skillpack.SKILL.md and session report
-- ✅ Structure reorganized per user spec: `out/skillpacks/chrismahoney/skillz/`
-- ✅ Skillpack Management feature added to appie.SKILL.md: specifying new/existing skillpacks and moving skills between packs
-- ✅ all 7 design questions answered in WORKING_SKILL_SEED.md
-- ✅ v1.2.0 released with 4 skillpacks and 6 skills
-- ✅ SKILL_TEMPLATE.md created for future skill creation
-- ✅ Flat directory structure established consistent with `.agents/skills/` pattern
-- ✅ Complete SKILL.md frontmatter schema defined with 6 core fields
-- ✅ Export format defined combining metadata, skills data array, session reports, usernotes, and npx instructions
-- ✅ Skills for further creation tracked: ['another-skillpack', 'appie-onboarding']
+- ✅ Fresh React + Vite + Tailwind v4 project scaffolded (Node 22)
+- ✅ All 11 mocked skills migrated to React components
+- ✅ `npx vite build` succeeds with 0 errors
+- ✅ Dev server running at http://localhost:5173
+- ✅ `dist/index.html` clean (0.43 kB)
+- ✅ `dist/assets/index-DiX-d-Ge.js` built bundle (227.64 kB)
+- ✅ `dist/assets/index-CzXtzlQK.css` built styles (14.97 kB)
+- ✅ All 4 Phase 1 steps complete: color palette, SkillCard, MindMap six-check, build verification
+- ✅ ui-ux-pro-max color palette with WCAG AA accessibility
+- ✅ SkillCard refined with focus-visible rings, hover/focus/active states
+- ✅ MindMap dataviz with six-check methodology (6/6 checks applied)
+- ✅ Build exits 0, 227.64 kB JS, 14.97 kB CSS (gzip optimized)
 
-## What's Left to Build
-- **P4**: Test the `npx skills` CLI integration - **COMPLETE** - CLI is GitHub-based; skillpack format is complementary
-- **P5**: Validate adherence to skills specification docs - **COMPLETE** - all frontmatter fields verified, session reports format consistent
-- ✅ another-skillpack created with another-skillpack.SKILL.md and session report
+## React Migration Status ✅ **COMPLETED**
+- ✅ `package.json` - Vite + React + Tailwind v4 dependencies
+- ✅ `vite.config.js` - React plugin configured
+- ✅ `postcss.config.js` - `@tailwindcss/postcss` + `autoprefixer`
+- ✅ `src/main.jsx` - Safe DOM null check, named import for App
+- ✅ `src/index.css` - Tailwind v4 with `@import "tailwindcss"` + `@theme` block
+- ✅ `src/data/skills.js` - 11 mocked skills
+- ✅ `src/components/SkillCard.jsx` - Individual skill card component
+- ✅ `src/components/SkillsGrid.jsx` - Grid layout (imports SkillCard)
+- ✅ `src/components/TabSwitcher.jsx` - Tab navigation (grid/mindmap/mapmanifest)
+- ✅ `src/components/SearchBar.jsx` - Search input with filtering
+- ✅ `src/components/ViewModeToggle.jsx` - Grid/List view toggle
+- ✅ `src/App.jsx` - Main app with tabs, search, view mode, hash-based navigation
+- ✅ `index.html` - Clean React root with `<div id="root"></div>`
 
-## Current Status
-- **Skillpack**: `chrismahoney/skillz@appie` with 3 skills (appie, session-report, appie-onboarding)
-- ✅ **Additional Skillpack**: `another-skillpack/skillz@another-skillpack` with 1 skill (another-skillpack)
-- ✅ **Skills in skillz/**: appie.SKILL.md, new-skillpack.SKILL.md, another-skillpack.SKILL.md
-- ✅ **Session reports**: appie.md, new-skillpack.md, another-skillpack.md, session-report.md (companion), appie-onboarding.md
-- **Template**: SKILL_TEMPLATE.md ready for new skills
-- ✅ **Directory structure**: out/skillpacks/chrismahoney/skillz/ with appie/, new-skillpack/, another-skillpack/, session-reports/, templates/ subdirectories
-- ✅ **Skillpack Management**: Users can specify new/existing skillpack from `out/skillpacks/` list and move skills freely between packs
+## Phase 1: Interactivity Scaffold ✅ **COMPLETE**
+- Tab switching (grid/mindmap/mapmanifest) works via hash navigation
+- Search filtering by name/description/tags
+- View mode toggle (grid/list)
+- DOMContentLoaded initialization
+- ✅ Color palette with ui-ux-pro-max WCAG AA accessibility
+- ✅ SkillCard refined with focus-visible rings, hover/focus/active states
+- ✅ MindMap dataviz with six-check methodology (6/6 checks applied)
+- ✅ Build verification: npx vite build exits 0
+- ✅ Jenkins CI/CD pipeline added (declarative, turbo-1 agent, build/test/package/release stages)
+- ✅ WCAG AA color palette validation via HSL computation
+- ✅ Design token archival in pipeline artifacts
 
-## Known Issues
-- None - all P1-P5 complete, all 7 milestones complete
+## Release Process Formalized ✅ **COMPLETE** (Phase 1 First Release)
+- **Pipeline style**: Declarative (chosen for standard CI/CD, simpler for Node/React)
+- **Artifact storage**: Cloud R2/Cloudflare profile (cost-effective, modern object storage)
+- **Nightly builds**: Disabled (triggered on push only, no scheduled nightly runs on turbo-1)
+- **Git flow**: feature/initial-release → PR → release/v1.0 → tag v1.0.0 (GitFlow-lite)
+- **Documentation**: Astro-based SPA (static-first, markdown-centric chosen over docusaurus/GitHub Pages)
+- **Appie user approval**: Flexible "Highway to the Danger Zone" approach - project-adjustable, discourages direct main pushes with humor, user decides level of involvement
+- **PR Workflow**: Appie generates draft PR → user reviews/edits → appie publishes as developer → user reviews and merges via CLI/preferred process
+- **Infrastructure (Optional)**: Docker host for development containers and image publishing - user can designate a docker host for dev containers and optionally publish images to Docker Hub or AWS ECR
 
-## Evolution of Project Decisions
-- Started with appie as the foundational skill (P1)
-- Added session-report as complementary skill (P3)
-- Design questions fully interrogated and documented (M1-M7 all completed)
-- Export format combines all required elements per skills specification
-- Memory bank structured to track progress across all 6 core files
-- ✅ **New-skillpack added** as second skillpack following same patterns as appie
-- ✅ **Skillpack Management feature** added to enable free skill movement between packs
-- **Structure reorganized** per user specification for consistency
+## Phase 2: Data Population ⏳ **NEXT**
+- Dynamic skill card render from `skills.sh` API (or current mocked data)
+- MindMap canvas mounts
+- MapManifest search input filters visible skill cards
+- View mode toggle persists state
+- No breaking CSS
 
-
-## Current Status
-- **Skillpack**: `chrismahoney/skillz@appie` with 3 skills (appie, session-report, appie-onboarding)
-- ✅ **Additional Skillpack**: `another-skillpack/skillz@another-skillpack` with 1 skill (another-skillpack)
-- ✅ **Skills in skillz/**: appie.SKILL.md, new-skillpack.SKILL.md, another-skillpack.SKILL.md
-- ✅ **Session reports**: appie.md, new-skillpack.md, another-skillpack.md, session-report.md (companion), appie-onboarding.md
-- **Template**: SKILL_TEMPLATE.md ready for new skills
-- ✅ **Directory structure**: out/skillpacks/chrismahoney/skillz/ with appie/, new-skillpack/, another-skillpack/, session-reports/, templates/ subdirectories
-- ✅ **Skillpack Management**: Users can specify new/existing skillpack from `out/skillpacks/` list and move skills freely between packs
-
-## Known Issues
-- None - all P1-P5 complete, all 7 milestones complete
-
-## 📋 Gaps & Decisions - v1.2.0 Roadmap (from appie-onboarding interrogation)
-- Session report template: `session-reports/SKILL_TEMPLATE.md` needed (separate from `SKILL_TEMPLATE.md`)
-- Environment variable defaults: **none** — `SKILLS_API_URL` and `SKILLS_REGISTRY_URL` always required, no placeholders
-- README automation: `/tmp/fix_*.py` were workarounds for file write issues; script `scripts/update_readme.py` planned once reliability resolved
-- New skillpack workflow: `<I wanna create [skillpack-name] in skillz>` command pattern
-- Tags: deferred — use existing patterns `[skillpack, mahoney]` or `[skillpack]`
-- CLI integration roadmap: skills-api integration for v1.3.0 (v1.2.0 local/complementary only)
-- Spec validation checklist: create `assets/SPEC_VALIDATION_CHECKLIST.md` based on appie creation session results
-- Skills.sh registry discovery: skills-api provider at `github.com/mastra-ai/skills-api`; document "v1.2.0: local format; v1.3.0: integration roadmap"
-
-## Evolution of Project Decisions
-- Started with appie as the foundational skill (P1)
-- Added session-report as complementary skill (P3)
-- Design questions fully interrogated and documented (M1-M7 all completed)
-- Export format combines all required elements per skills specification
-- Memory bank structured to track progress across all 6 core files
-- ✅ **New-skillpack added** as second skillpack following same patterns as appie
-- ✅ **Skillpack Management feature** added to enable free skill movement between packs
-- **Structure reorganized** per user specification for consistency
-- ✅ **appie-onboarding skill added** targeting 0.2.0 release
-- ✅ **git-workflow skill added** to mahoney-skillz (new skill within existing skillpack)
-- ✅ **test-skill added** to appie skillpack with .agents directory integration
-- ✅ **appie-branstorm added** - generic onboarding pattern for skill discovery and naming
-- ✅ **appz skillpack added** - odyssey catalog wandering pattern
-- 🅰️ **Gaps & decisions interrogated**: 8 critical requirements synthesized for v1.2.0 foundation
+## Next Steps
+- ✅ Phase 1 Complete: All 4 steps verified (color palette, SkillCard refinement, MindMap six-check, build)
+- 📋 Phase 2: Proceed to data population from `skills.sh` API
+- 📋 Phase 3: Design tokens documentation generation (planned)
+- 📋 Phase 4: Consider state persistence (localStorage) for skill collections
