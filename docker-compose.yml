@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: skillz-jenkins
+    # Port mappings:
+    # 8080: Jenkins HTTP interface (jobs, logs, configuration)
+    # 50000: JNLP port for agent connections (used by declarative pipeline)
+    ports:
+      - "8081:8080"
+      - "50000:50000"
+    # Environment configuration
+    environment:
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+      - JENKINS_OPTS=--httpPort=8080
+    # Volume for persisting Jenkins home/configuration/jobs
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    # Health check to ensure Jenkins is ready
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/login"]
+      interval: 60s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    # Restart policy for stability
+    restart: unless-stopped
+
+  # Optional: Jenkins CLI agent (for programmatic interactions)
+  jenkins-agent:
+    image: jenkins/inbound-agent:latest
+    container_name: skillz-jenkins-agent
+    # Connect to Jenkins master via JNLP
+    command: ["java", "-jar", "agent.jar", "-workDir", "/home/jenkins/agent"]
+    environment:
+      - JENKINS_URL=http://skillz-jenkins:8080/
+      - JNLP_URL=http://skillz-jenkins:50000/jnlp
+    # Volume for build artifacts and checkout
+    volumes:
+      - jenkins_agent_work:/home/jenkins/agent
+    # Restart policy
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:
+    driver: local
+  jenkins_agent_work:
+    driver: local
