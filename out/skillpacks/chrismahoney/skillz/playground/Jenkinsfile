@@ -137,6 +137,61 @@ console.log(\"Design tokens written to dist/artifacts/design-tokens.json\");
             }
             post {
                 success {
+# Optional Docker Review Stage - for development container review sessions
+        # User can designate a docker host and this stage will run docker compose if available
+        stage('Docker Review') {
+            agent { none }
+            steps {
+                script {
+                    // Check if docker is available and docker-compose exists
+                    def dockerAvailable = sh(script: 'which docker 2>&1', returnStdout: true).trim() != ''
+                    def composeAvailable = false
+                    try {
+                        composeAvailable = sh(script: 'which docker-compose 2>&1 || docker compose 2>&1', returnStdout: true).trim() != ''
+                    } catch {
+                        // docker not available, that's ok
+                    }
+                    if (dockerAvailable && composeAvailable) {
+                        // Check if docker-compose.yml exists in project root
+                        def composeFile = file('docker-compose.yml').exists()
+                        def dockerHost = env.DOCKER_HOST
+                        if (composeFile) {
+                            echo '=== Running Docker Compose for Development Review ==='
+                            // If DOCKER_HOST is set, use it; otherwise use local docker
+                            def registry = dockerHost ? dockerHost : 'local'
+                            echo "Using docker registry: ${registry}"
+                            // Pull any base images first
+                            sh 'docker compose pull'
+                            // Start services for development review
+                            sh 'docker compose up -d'
+                            // Wait a moment for services to start
+                            sh 'sleep 5'
+                            // Show running containers
+                            sh 'docker ps'
+                            echo 'Development review containers running - access at http://localhost:3000 or configured port'
+                        } else {
+                            echo 'No docker-compose.yml found - skipping docker review stage'
+                            echo 'To enable: add docker-compose.yml to project root and set DOCKER_HOST if needed'
+                        }
+                    } else {
+                        echo 'Docker not available - skipping docker review stage'
+                        echo 'To enable: install docker and docker compose, add docker-compose.yml'
+                    }
+                }
+            }
+            post {
+                success {
+                    echo 'Docker review containers started ✅'
+                }
+                failure {
+                    echo 'Docker review had issues - check docker logs'
+                }
+                always {
+                    // Optionally stop containers at end of build
+                    // sh 'docker compose down'
+                }
+            }
+        }
                     echo 'Documentation artifacts generated ✅'
                 }
             }

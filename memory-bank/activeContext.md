@@ -47,4 +47,5 @@
   - Documentation: Astro-based SPA (static-first, markdown-centric)
   - Appie user approval: Flexible "Highway to the Danger Zone" - project-adjustable, discourages direct main pushes
 - **PR Workflow**: Appie generates draft PR → user reviews/edits → appie publishes as developer → user reviews and merges via CLI/preferred process ✅ **ADDED**
+- **Infrastructure (Optional)**: Docker host for development containers and image publishing - user can designate a docker host for dev containers and optionally publish images to Docker Hub or AWS ECR ✅ **ADDED**
 - **Phase 2**: Proceed to data population from `skills.sh` API
