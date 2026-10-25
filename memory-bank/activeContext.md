@@ -49,3 +49,4 @@
 - **PR Workflow**: Appie generates draft PR → user reviews/edits → appie publishes as developer → user reviews and merges via CLI/preferred process ✅ **ADDED**
 - **Infrastructure (Optional)**: Docker host for development containers and image publishing - user can designate a docker host for dev containers and optionally publish images to Docker Hub or AWS ECR ✅ **ADDED**
 - **Phase 2**: Proceed to data population from `skills.sh` API
+- **Skills.sh Catalog**: Agent browser skill explored https://skills.sh - "The Agent Skills Directory" listing skills for Claude Code, Cursor, Codex, GitHub Copilot, Windsurf, Gemini, Cline, AMP, Antigravity, Droid, Goose, Kilo, Kiro CLI, Nous Research, OpenCode, Roo, Trae, VS Code, Zed. Catalog available at https://skills.sh for skill discovery and API data population.
