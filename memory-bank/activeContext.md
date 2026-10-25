@@ -46,4 +46,5 @@
   - Git flow: feature branch → PR → release branch → tag (GitFlow-lite)
   - Documentation: Astro-based SPA (static-first, markdown-centric)
   - Appie user approval: Flexible "Highway to the Danger Zone" - project-adjustable, discourages direct main pushes
+- **PR Workflow**: Appie generates draft PR → user reviews/edits → appie publishes as developer → user reviews and merges via CLI/preferred process ✅ **ADDED**
 - **Phase 2**: Proceed to data population from `skills.sh` API
